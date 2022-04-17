@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="styx"
+           revision="S"
+           fetch="https://github.com/StyxProject" />
+
+  <!-- General -->
+  <project path="vendor/styx" name="vendor_styx" remote="styx" />
+
+  <!-- Build repositories -->
+  <project path="build/make" name="build" remote="styx" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="build_soong" remote="styx" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+
+  <!-- device -->
+  <project path="device/styx/sepolicy" name="device_styx_sepolicy" remote="styx" />
+  <project path="device/qcom/sepolicy" name="device_qcom_sepolicy" remote="styx" />
+  <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy-legacy-um" remote="styx" />
+  <project path="device/qcom/sepolicy_vndr" name="device_qcom_sepolicy_vndr" remote="styx" />
+
+  <!-- external -->
+  <project path="external/tinycompress" name="external_tinycompress" remote="styx"/>
+
+  <!-- fonts -->
+  <project path="external/roboto-fonts" name="external_roboto-fonts" remote="styx" />
+  <project path="external/google-fonts/cutive-mono" name="external_google-fonts_cutive-mono" remote="styx"/>
+  <project path="external/noto-fonts" name="external_noto-fonts" remote="styx" />
+
+  <!-- Framework -->
+  <project path="frameworks/base" name="frameworks_base" remote="styx" />
+  <project path="frameworks/av" name="frameworks_av" remote="styx" />
+
+  <!-- Hardware repos -->
+  <project path="hardware/interfaces" name="hardware_interfaces" remote="styx" />
+  <project path="hardware/libhardware" name="hardware_libhardware" remote="styx" />
+
+  <!-- Packages -->
+  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="styx" />
+
+  <!-- System -->
+  <project path="system/core" name="system_core" remote="styx" />
+  <project path="system/sepolicy" name="system_sepolicy" remote="styx" />
+
+</manifest>
