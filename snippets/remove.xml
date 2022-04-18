@@ -67,7 +67,9 @@
   <remove-project name="platform/hardware/interfaces"/>
 
   <!-- Packages -->
+  <remove-project name="platform/packages/apps/Launcher3" />
   <remove-project name="platform/packages/apps/Settings" />
+  <remove-project name="platform/packages/apps/SettingsIntelligence" />
 
   <!-- System -->
   <remove-project name="platform/system/core" />
