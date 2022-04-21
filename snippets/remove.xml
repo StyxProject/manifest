@@ -56,6 +56,7 @@
 
   <!-- Frameworks -->
   <remove-project name="platform/frameworks/base" />
+  <remove-project name="platform/frameworks/native" />
   <remove-project name="platform/frameworks/av" />
 
   <!-- fonts -->
@@ -70,6 +71,7 @@
   <remove-project name="platform/packages/apps/Launcher3" />
   <remove-project name="platform/packages/apps/Settings" />
   <remove-project name="platform/packages/apps/SettingsIntelligence" />
+  <remove-project name="platform/packages/providers/MediaProvider" />
 
   <!-- System -->
   <remove-project name="platform/system/core" />
