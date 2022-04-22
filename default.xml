@@ -1105,6 +1105,7 @@
   <repo-hooks in-project="platform/tools/repohooks" enabled-list="pre-upload" />
 
   <!-- Styx -->
+  <include name="snippets/aosp-r.xml" />
   <include name="snippets/lineage.xml" />
   <include name="snippets/remove.xml" />
   <include name="snippets/styx.xml" />
