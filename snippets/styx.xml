@@ -57,6 +57,7 @@
   <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" remote="styx" />
   <project path="packages/apps/Settings" name="packages_apps_Settings" remote="styx" />
   <project path="packages/apps/SettingsIntelligence" name="packages_apps_SettingsIntelligence" remote="styx" />
+  <project path="packages/apps/widget" name="packages_apps_widget" remote="styx" revision="master" />
   <project path="packages/providers/MediaProvider" name="packages_providers_MediaProvider" remote="styx" />
 
   <!-- System -->
