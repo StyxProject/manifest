@@ -29,6 +29,9 @@
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
 
+  <!-- bionic -->
+  <project path="bionic" name="bionic" remote="styx" />
+
   <!-- device -->
   <project path="device/styx/sepolicy" name="device_styx_sepolicy" remote="styx" />
   <project path="device/qcom/sepolicy" name="device_qcom_sepolicy" remote="styx" />
@@ -48,6 +51,7 @@
   <project path="frameworks/base" name="frameworks_base" remote="styx" />
   <project path="frameworks/native" name="frameworks_native" remote="styx" />
   <project path="frameworks/av" name="frameworks_av" remote="styx" />
+  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" remote="styx" />
 
   <!-- Hardware repos -->
   <project path="hardware/interfaces" name="hardware_interfaces" remote="styx" />
