@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <include name="snippets/remove.xml" />
+  <include name="snippets/lineage.xml" />
+
+  <!-- External repos -->
+  <project path="external/selinux" name="external_selinux" remote="styx" />
+  <project path="external/tinycompress" name="external_tinycompress" remote="styx" />
+
+  <!-- Framework repos -->
+  <project path="frameworks/av" name="frameworks_av" remote="styx" />
+  <project path="frameworks/base" name="frameworks_base" remote="styx" />
+  <project path="frameworks/native" name="frameworks_native" remote="styx" />
+
+  <!-- General repos -->
+  <project path="bionic" name="bionic" remote="styx" />
+  <project path="build/make" name="build" remote="styx">
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="build_soong" remote="styx" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+  <project path="bootable/recovery" name="bootable_recovery" remote="styx" />
+  <project path="manifest" name="manifest" remote="styx" />
+
+  <!-- Hardware repos -->
+  <project path="hardware/interfaces" name="hardware_interfaces" remote="styx" />
+  <project path="hardware/libhardware" name="hardware_libhardware" remote="styx" />
+
+  <!-- Packages repos -->
+  <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" remote="styx" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="styx" />
+  <project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" remote="styx" />
+  <project path="packages/apps/Updater" name="packages_apps_Updater" remote="styx" />
+
+  <!-- System Repos -->
+  <project path="system/core" name="system_core" remote="styx" />
+  <project path="system/sepolicy" name="system_sepolicy" remote="styx" />
+
+  <!-- Sepolicy Repos -->
+  <project path="device/styx/sepolicy" name="device_styx_sepolicy" remote="styx" />
+  <project path="device/qcom/sepolicy" name="device_qcom_sepolicy" remote="styx" />
+  <project path="device/qcom/sepolicy_vndr" name="device_qcom_sepolicy_vndr" remote="styx" />
+
+  <!-- Vendor Repos -->
+  <project path="vendor/styx" name="vendor_styx" remote="styx" />
+  <project path="vendor/codeaurora/telephony" name="vendor_codeaurora_telephony" remote="styx" />
+  <project path="vendor/google/gms" name="gotenksIN/android_vendor_google_gms" remote="gitlab" revision="topaz" clone-depth="1" />
+  <project path="vendor/google/pixel" name="ThankYouMario/android_vendor_google_pixel" remote="github" revision="topaz" clone-depth="1" />
+
+</manifest>
