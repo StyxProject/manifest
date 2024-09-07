@@ -2,8 +2,9 @@
 <manifest>
 
   <remote  name="aosp"
-           fetch=".."
+           fetch="https://android.googlesource.com"
            review="https://android-review.googlesource.com/" />
+
   <default revision="refs/tags/android-15.0.0_r1"
            remote="aosp"
            sync-j="4" />
@@ -1468,5 +1469,9 @@
     <copyfile src="lk_inc.mk" dest="lk_inc.mk" />
   </project>
   <!-- END open-source projects -->
+
+  <include name="lineage.xml" />
+  <include name="remove.xml" />
+  <include name="styx.xml" />
 
 </manifest>

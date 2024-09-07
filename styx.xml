@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- GitHub
+ (Styx) -->
+  <remote  name="styx"
+           revision="vic"
+           fetch="https://github.com/StyxProject/" />
+
+  <!-- Build -->
+  <project path="build/make" name="build" remote="styx" groups="pdk" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="build_soong" remote="styx" groups="pdk,tradefed" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+
+  <!-- Hardware Abstraction Layers -->
+  <project path="hardware/qcom-caf/common" name="hardware_qcom-caf_common" groups="qcom" remote="styx" >
+    <!-- add guard for AOSP hardware/qcom dir -->
+    <linkfile src="os_pickup_aosp.mk" dest="hardware/qcom/Android.mk" />
+    <!-- add guards for CAF repositories -->
+    <linkfile src="os_pickup_sepolicy_vndr.mk" dest="device/qcom/sepolicy_vndr/SEPolicy.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/msm8953/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8953/Android.mk" />
+    <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8996/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8996/Android.mk" />
+    <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8998/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8998/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sdm660/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sdm660/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sdm845/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sdm845/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8150/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8150/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8250/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8250/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8350/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8350/Android.mk" />
+    <linkfile src="os_pickup_audio-ar.mk" dest="hardware/qcom-caf/sm8450/audio/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8450/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8450/Android.mk" />
+    <linkfile src="os_pickup_audio-ar.mk" dest="hardware/qcom-caf/sm8550/audio/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8550/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8550/Android.mk" />
+  </project>
+  <project path="hardware/qcom-caf/sm8150/audio" name="hardware_qcom_audio" groups="qcom,msmnile" revision="vic-8150-caf" remote="styx" />
+  <project path="hardware/qcom-caf/sm8150/display" name="hardware_qcom_display" groups="qcom" revision="vic-8150-caf" remote="styx" />
+  <project path="hardware/qcom-caf/sm8150/media" name="hardware_qcom_media" groups="qcom,msmnile" revision="vic-8150-caf" remote="styx" />
+  <project path="hardware/qcom-caf/wlan" name="hardware_qcom_wlan" groups="qcom,kailua-vendor" remote="styx" />
+
+  <!-- Device -->
+  <project path="device/lineage/sepolicy" name="device_lineage_sepolicy" remote="styx" />
+
+  <!-- External -->
+  <project path="external/gptfdisk" name="external_gptfdisk" remote="styx" />
+  <project path="external/tinycompress" name="external_tinycompress" remote="styx" />
+
+  <!-- Frameworks -->
+  <project path="frameworks/base" name="frameworks_base" remote="styx" revision="vic" />
+
+  <!-- Hardware -->
+  <project path="hardware/interfaces" name="hardware_interfaces" remote="styx" />
+  <project path="hardware/libhardware" name="hardware_libhardware" remote="styx" />
+  <project path="hardware/google/pixel" name="hardware_google_pixel" remote="styx" />
+  <project path="hardware/lineage/compat" name="hardware_lineage_compat" remote="styx" />
+  <project path="hardware/lineage/interfaces" name="hardware_lineage_interfaces" remote="styx" />
+
+  <!-- Packages -->
+  <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" remote="styx" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="styx" />
+
+  <!-- System -->
+  <project path="system/core" name="system_core" remote="styx" />
+  <project path="system/sepolicy" name="system_sepolicy" remote="styx" />
+  <project path="system/security" name="system_security" remote="styx" />
+  <project path="system/vold" name="system_vold" remote="styx" />
+
+  <!-- Vendor -->
+  <project path="vendor/styx" name="vendor_styx" remote="styx" />
+  <project path="vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um" name="vendor_qcom-opensource_data-ipa-cfg-mgr-legacy-um" remote="styx" />
+
+</manifest>
+  
