@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
+  <remove-project name="platform/bionic" />
+
   <!-- Build -->
   <remove-project name="platform/build" />
   <remove-project name="platform/build/soong" />
+
+  <!-- Recovery -->
+  <remove-project name="platform/bootable/recovery" />
+  <remove-project name="platform/bootable/deprecated-ota" />
 
   <!-- Device -->
   <remove-project name="device/amlogic/yukawa" />
@@ -86,11 +92,14 @@
   <remove-project name="device/sample" />
 
   <!-- External -->
+  <remove-project name="platform/external/e2fsprogs" />
   <remove-project name="platform/external/gptfdisk" />
+  <remove-project name="platform/external/mksh" />
   <remove-project name="platform/external/tinycompress" />
 
   <!-- Frameworks -->
   <remove-project name="platform/frameworks/base" />
+  <remove-project name="platform/frameworks/native" />
 
   <!-- Hardware -->
   <remove-project name="platform/hardware/google/pixel" />
@@ -102,6 +111,7 @@
   <remove-project name="platform/packages/apps/Settings" />
 
   <!-- System --> 
+  <remove-project name="platform/system/libhidl" />
   <remove-project name="platform/system/vold" />
   <remove-project name="platform/system/security" />
   <remove-project name="platform/system/sepolicy" />
