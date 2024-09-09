@@ -62,6 +62,7 @@
   <project path="device/lineage/sepolicy" name="device_lineage_sepolicy" remote="styx" />
 
   <!-- External -->
+  <project path="external/dtc" name="external_dtc" remote="styx" />
   <project path="external/e2fsprogs" name="external_e2fsprogs" remote="styx" />
   <project path="external/gptfdisk" name="external_gptfdisk" remote="styx" />
   <project path="external/mksh" name="external_mksh" remote="styx" />
