@@ -66,6 +66,7 @@
   <project path="external/e2fsprogs" name="external_e2fsprogs" remote="styx" />
   <project path="external/gptfdisk" name="external_gptfdisk" remote="styx" />
   <project path="external/mksh" name="external_mksh" remote="styx" />
+  <project path="external/roboto-fonts" name="external_roboto-fonts" remote="styx" />
   <project path="external/tinycompress" name="external_tinycompress" remote="styx" />
 
   <!-- Frameworks -->
@@ -82,6 +83,10 @@
   <!-- Packages -->
   <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" remote="styx" />
   <project path="packages/apps/Settings" name="packages_apps_Settings" remote="styx" />
+  <project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" remote="styx" />
+
+  <!-- Modules -->
+  <project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth" remote="styx" />
 
   <!-- Recovery -->
   <project path="bootable/recovery" name="bootable_recovery" remote="styx" />
@@ -96,6 +101,7 @@
 
   <!-- Vendor -->
   <project path="vendor/styx" name="vendor_styx" remote="styx" />
+  <project path="vendor/styx-prebuilts" name="vendor_styx-prebuilts" remote="styx" />
   <project path="vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um" name="vendor_qcom-opensource_data-ipa-cfg-mgr-legacy-um" remote="styx" />
 
 </manifest>

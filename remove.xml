@@ -96,6 +96,7 @@
   <remove-project name="platform/external/e2fsprogs" />
   <remove-project name="platform/external/gptfdisk" />
   <remove-project name="platform/external/mksh" />
+  <remove-project name="platform/external/roboto-fonts" />
   <remove-project name="platform/external/tinycompress" />
 
   <!-- Frameworks -->
@@ -110,6 +111,8 @@
   <!-- Packages --> 
   <remove-project name="platform/packages/apps/Launcher3" />
   <remove-project name="platform/packages/apps/Settings" />
+  <remove-project name="platform/packages/apps/ThemePicker" />
+  <remove-project name="platform/packages/modules/Bluetooth" />
 
   <!-- System --> 
   <remove-project name="platform/system/libhidl" />
